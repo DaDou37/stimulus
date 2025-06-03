@@ -4,12 +4,12 @@
 
 {% block body %}
 
-<div>
+<div data-controller="postal-code">
     {{ form_start(form) }}
 
-        {{ form_row(form.PostalCode, {
+        {{ form_row(form.postalCode, {
             attr: {
-                'data-postal-code-target': 'PostalCode',
+                'data-postal-code-target': 'postalCode',
                 'data-action': 'change->postal-code#updateCityList'
             }
         }) }}
@@ -17,7 +17,7 @@
 
         {{ form_row(form.city, {
             attr: {
-                'data-postal-code-target': 'City'
+                'data-postal-code-target': 'city'
             }
         }) }}
 

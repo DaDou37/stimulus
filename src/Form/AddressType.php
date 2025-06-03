@@ -14,11 +14,11 @@ class AddressType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('PostalCode', TextType::class, [
+            ->add('postalCode', TextType::class, [
                 'mapped' => false,
                 'required' => true
             ]) 
-            
+
             ->add('city', EntityType::class, [
                 'class' => City::class,
                 'choices' => [],
